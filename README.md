@@ -15,3 +15,7 @@ Data structure for implementation to work:
 ```javascript
 ["FirstName LastName": {"Combat Isis": 1, "Healthcare": 0},"FirstName2 LastName2": {"CombatIsis": 0, "HealthCare":0},...]
 ```
+Todo:
+
+1. Get data into a table where each row would represent a valid vector with format defined above
+2. Perform a Voting Records comparison using Dot Product
