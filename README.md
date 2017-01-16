@@ -8,3 +8,10 @@ Data used:
   * Voting vectors can be scrapped from the website above
 2. http://www.parl.gc.ca/parliamentarians/en/members
   * Members of Parliment can be found here
+
+
+Data structure for implementation to work:
+
+```javascript
+["FirstName LastName": {"Combat Isis": 1, "Healthcare": 0},"FirstName2 LastName2": {"CombatIsis": 0, "HealthCare":0},...]
+```
