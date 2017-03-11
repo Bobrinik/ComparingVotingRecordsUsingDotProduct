@@ -4,7 +4,18 @@ This is an implementation of the lab described in "Coding the Matrix book"
 
 # Theory behind this project
 - What is a dot-product?
+	- It is a scalar product of vectors
+	- u * v = u[0] * v[0] + u[1] * v[1] + u[2] * v[2] + ... + u[n] * v[n] 
 - How can we use dot-product?
+	-It can be used to measure the simillarity between vetors over R
+
+```
+v1 = {'Mp1':[1,0,0]}
+v2 = {'Mp2':[0,0,1]}
+v3 = {'Mp3':[1,0,0]}
+v1 * v2 == 0
+v1 * v3 == 1
+```
 
 
 # Implementation
@@ -28,7 +39,8 @@ Data structure for implementation to work:
 //after getVotes.py
 {"votes": [{"name": "Mr. Ziad Aboultaif", "party": "Conservative", "votes": {"nay": 1, "paired": 0, "yea": 0}}, {"name": "Mr. Harold Albrecht", "party": "Conservative", "votes": {"nay": 1, "paired": 0, "yea": 0}}, {"name": "Mr. John Aldag", "party": "Liberal", "votes": {"nay": 1, "paired": 0, "yea": 0}}, {"name": "Mr. Omar Alghabra", "party": "Liberal", "votes": {"nay": 1, "paired": 0, "yea": 0}}]}
 
-//after put_one_file.py
+//after clean.py 
 
-{"Mr. Gary Anandasangaree": [{"yea": 1, "paired": 0, "nay": 0}, {"yea": 1, "paired": 0, "nay": 0}],"Mr. Steven Blaney": [{"yea": 0, "paired": 0, "nay": 1}, {"yea": 0, "paired": 0, "nay": 1}]}
+{"Mr. Gary Anandasangaree": {"yea": 1, "paired": 0, "nay": 0}, ...}
+creates a separate file with cleaned data per policy
 ```
