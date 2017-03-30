@@ -34,8 +34,8 @@ v1 * v3 == 1
 
 
 Data structure for implementation to work:
-
 ```javascript
+
 //after getVotes.py
 {"votes": [{"name": "Mr. Ziad Aboultaif", "party": "Conservative", "votes": {"nay": 1, "paired": 0, "yea": 0}}, {"name": "Mr. Harold Albrecht", "party": "Conservative", "votes": {"nay": 1, "paired": 0, "yea": 0}}, {"name": "Mr. John Aldag", "party": "Liberal", "votes": {"nay": 1, "paired": 0, "yea": 0}}, {"name": "Mr. Omar Alghabra", "party": "Liberal", "votes": {"nay": 1, "paired": 0, "yea": 0}}]}
 
