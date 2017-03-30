@@ -41,6 +41,6 @@ Data structure for implementation to work:
 
 //after clean.py 
 
-{"Mr. Gary Anandasangaree": {"yea": 1, "paired": 0, "nay": 0}, ...}
+{"Mr. Gary Anandasangaree": {"yea": 79, "paired": 0, "nay": 47}, ...}
 creates a separate file with cleaned data per policy
 ```
