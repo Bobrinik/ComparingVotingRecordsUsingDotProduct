@@ -44,20 +44,18 @@ def least_simillar(mp, votes):
 
 def least_simillar_acrosee_all_policies(mp):
     least = []
-    for i in range(126):
-        f = open("data_clean/"+str(i)+"_clean.json")
-        d = f.read()
-        data = json.loads(d)
-        least.append(least_simillar(mp,data))
+    f = open("data_clean/result_clean.json")
+    d = f.read()
+    data = json.loads(d)
+    least.append(least_simillar(mp,data))
     return least
 
 def simillars_across_all_policies(mp):
     simillar = []
-    for i in range(126):
-        f = open("data_clean/"+str(i)+"_clean.json")
-        d = f.read()
-        data = json.loads(d)
-        simillar.append(most_simillar(mp,data))
+    f = open("data_clean/result_clean.json")
+    d = f.read()
+    data = json.loads(d)
+    simillar.append(most_simillar(mp,data))
     return simillar
 
 def putIntoHistogram(data):
@@ -83,18 +81,20 @@ def plot(hist):
 
     plt.show()
 
-f = open("data_clean/0_clean.json")
+ 
+f = open("data_clean/result_clean.json")
 data = f.read()
 formatted_data = json.loads(data)
 result = policy_compare("Mr. Ziad Aboultaif","Mr. Dan Vandal",formatted_data)
 print "Degree of similarity: "+str(result)
-print "Most simmilar to Mr. Phil McColeman: " + most_simillar("Mr. Phil McColeman", formatted_data)
-print "Least simillar to Mr. Phil McColeman: " + least_simillar("Mr. Phil McColeman", formatted_data)
+
+mp = "Mr. Glen Motz"
+print "Most simmilar to "+mp+": " + most_simillar(mp, formatted_data)
+print "Least simillar to "+mp+": " + least_simillar(mp, formatted_data)
 print "Simmilars across all votes for Mr. Romeo Saganash: "
 overallSimilarities = least_simillar_acrosee_all_policies("Mr. Romeo Saganash")
 graph = putIntoHistogram(overallSimilarities)
 print graph
-
 overallSimilarities = simillars_across_all_policies("Mr. Romeo Saganash")
 graph = putIntoHistogram(overallSimilarities)
 print graph
