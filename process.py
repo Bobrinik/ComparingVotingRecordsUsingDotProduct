@@ -81,7 +81,25 @@ def plot(hist):
 
     plt.show()
 
- 
+
+#which two senators disagree the most
+#which two senators have the lowest dot product
+def bitter_rivals(data):
+	d = {mp1+" "+mp2: policy_compare(mp1, mp2, data)  for mp1 in data.keys() for mp2 in data.keys() if not (mp1 == mp2)}
+	minvalue = {"name":"some", "value": 0}
+	for mp_pair in d.keys():
+		if(minvalue["name"] == "some"):
+			minvalue["value"] = d[mp_pair]
+			minvalue["name"] = mp_pair
+		elif(minvalue["value"] > d[mp_pair]):
+			minvalue["value"] = d[mp_pair]
+			minvalue["name"] = mp_pair
+	return minvalue
+
+
+def most_political_oponents(threshhold,data):
+	
+
 f = open("data_clean/result_clean.json")
 data = f.read()
 formatted_data = json.loads(data)
@@ -93,8 +111,4 @@ print "Most simmilar to "+mp+": " + most_simillar(mp, formatted_data)
 print "Least simillar to "+mp+": " + least_simillar(mp, formatted_data)
 print "Simmilars across all votes for Mr. Romeo Saganash: "
 overallSimilarities = least_simillar_acrosee_all_policies("Mr. Romeo Saganash")
-graph = putIntoHistogram(overallSimilarities)
-print graph
-overallSimilarities = simillars_across_all_policies("Mr. Romeo Saganash")
-graph = putIntoHistogram(overallSimilarities)
-print graph
+print bitter_rivals(formatted_data)
